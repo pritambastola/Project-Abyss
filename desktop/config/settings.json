@@ -1,0 +1,11 @@
+{
+  "assistant": {
+    "name": "Jarvis",
+    "wake_word": "Jarvis",
+    "theme": "Dark",
+    "voice": "Default"
+  },
+  "logging": {
+    "level": "INFO"
+  }
+}
