@@ -1,13 +1,12 @@
 {
-  "open": ["open", "launch", "start", "run"],
-
-  "close": ["close", "quit", "exit", "terminate"],
-
-  "search": ["search", "google", "find", "look"],
-
+  "open": ["open"],
+  "close": ["close"],
+  "search": ["search"],
   "play": ["play"],
-
-  "volume": ["volume", "sound"],
-
-  "brightness": ["brightness", "screen"]
+  "volume_up": ["volume_up"],
+  "volume_down": ["volume_down"],
+  "brightness_up": ["brightness_up"],
+  "brightness_down": ["brightness_down"],
+  "mute": ["mute"],
+  "unmute": ["unmute"]
 }

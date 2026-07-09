@@ -11,11 +11,14 @@ class Cleaner:
         with open(path, encoding="utf-8") as f:
             self.stopwords = set(json.load(f))
 
-    def clean(self, text: str):
+    def clean(self, text):
 
-        text = text.lower()
+        words = text.lower().split()
 
-        for word in self.stopwords:
-            text = text.replace(word, " ")
+        words = [
+            word
+            for word in words
+            if word not in self.stopwords
+        ]
 
-        return " ".join(text.split())
+        return " ".join(words)

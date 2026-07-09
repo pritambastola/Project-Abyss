@@ -1,0 +1,25 @@
+{
+  "application": [
+    "chrome",
+    "spotify",
+    "discord",
+    "vscode",
+    "visual studio code",
+    "calculator",
+    "notepad",
+    "cmd",
+    "terminal",
+    "explorer"
+  ],
+
+  "website": [
+    "youtube",
+    "github",
+    "google",
+    "reddit",
+    "stackoverflow",
+    "chatgpt"
+  ],
+
+  "modifier": ["incognito", "private"]
+}

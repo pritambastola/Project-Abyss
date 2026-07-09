@@ -1,0 +1,13 @@
+{
+  "open": ["open", "launch", "start", "run", "fire", "execute"],
+
+  "close": ["close", "quit", "exit", "terminate"],
+
+  "search": ["search", "google", "find", "lookup"],
+
+  "play": ["play", "watch", "listen"],
+
+  "increase": ["increase", "raise", "higher"],
+
+  "decrease": ["decrease", "lower", "reduce"]
+}

@@ -1,33 +1,11 @@
-from database.schema import create_schema
-from system.application_scanner import ApplicationScanner
-from system.application_indexer import ApplicationIndexer
-from brain.fast_router import FastRouter
+from brain.nlu.engine import NLUEngine
 
+nlu = NLUEngine()
 
-def main():
+while True:
 
-    create_schema()
+    text = input("> ")
 
-    scanner = ApplicationScanner()
-    scanner.scan()
+    intent = nlu.process(text)
 
-    indexer = ApplicationIndexer()
-    indexer.generate_aliases()
-    indexer.close()
-
-    router = FastRouter()
-
-    while True:
-        command = input("Jarvis > ")
-
-        if command.lower() == "exit":
-            break
-
-        if not router.execute(command):
-            print("Unknown command")
-
-    router.close()
-
-
-if __name__ == "__main__":
-    main()
+    print(intent)
