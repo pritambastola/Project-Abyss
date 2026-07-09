@@ -1,0 +1,5 @@
+loguru
+pydantic
+psutil
+pywin32
+pywinauto

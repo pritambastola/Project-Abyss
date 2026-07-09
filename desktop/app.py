@@ -1,15 +1,32 @@
-from core.application import Application
+from database.schema import create_schema
+from system.application_scanner import ApplicationScanner
+from system.application_indexer import ApplicationIndexer
+from brain.fast_router import FastRouter
 
 
 def main():
 
-    app = Application()
+    create_schema()
 
-    app.logger.info("Project-Abyss Started")
+    scanner = ApplicationScanner()
+    scanner.scan()
 
-    app.logger.info(
-        f"Assistant: {app.config.get('assistant.name')}"
-    )
+    indexer = ApplicationIndexer()
+    indexer.generate_aliases()
+    indexer.close()
+
+    router = FastRouter()
+
+    while True:
+        command = input("Jarvis > ")
+
+        if command.lower() == "exit":
+            break
+
+        if not router.execute(command):
+            print("Unknown command")
+
+    router.close()
 
 
 if __name__ == "__main__":
