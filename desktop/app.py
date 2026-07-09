@@ -1,19 +1,15 @@
-from core.logger import logger
-from core.event_bus import EventBus
-
-
-def spotify_opened(app_name):
-    logger.info(f"{app_name} opened successfully!")
+from core.application import Application
 
 
 def main():
-    bus = EventBus()
 
-    bus.subscribe("app_opened", spotify_opened)
+    app = Application()
 
-    logger.info("Publishing Event...")
+    app.logger.info("Project-Abyss Started")
 
-    bus.publish("app_opened", "Spotify")
+    app.logger.info(
+        f"Assistant: {app.config.get('assistant.name')}"
+    )
 
 
 if __name__ == "__main__":

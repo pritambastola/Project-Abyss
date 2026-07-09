@@ -1,29 +1,26 @@
+"""
+Project-Abyss Application
+"""
+
 from core.logger import logger
 from core.config import Config
+from core.event_bus import EventBus
 
 
 class Application:
-    """
-    Central application object.
-
-    Holds references to every major service used by
-    Project-Abyss.
-    """
-
     def __init__(self):
-
-        logger.info("Creating Application...")
 
         self.logger = logger
         self.config = Config()
+        self.event_bus = EventBus()
 
-        self.event_bus = None
-        self.registry = None
+        self.services = {}
 
-        self.voice = None
-        self.brain = None
-        self.memory = None
-        self.vision = None
-        self.ui = None
+        logger.info("Application initialized.")
 
-        logger.info("Application created successfully.")
+    def register_service(self, name, service):
+        self.services[name] = service
+        logger.info(f"Registered service: {name}")
+
+    def get_service(self, name):
+        return self.services.get(name)
