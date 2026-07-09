@@ -1,0 +1,41 @@
+{
+  "brightness up": [
+    "brightness up",
+    "increase brightness",
+    "raise brightness",
+    "increase screen brightness",
+    "make it brighter",
+    "make screen brighter",
+    "brighter",
+    "brightness higher",
+    "make brightness higher"
+  ],
+
+  "brightness down": [
+    "brightness down",
+    "decrease brightness",
+    "lower brightness",
+    "decrease screen brightness",
+    "make it darker",
+    "make screen darker",
+    "darker",
+    "dim the screen",
+    "dim screen",
+    "brightness lower",
+    "make brightness lower"
+  ],
+
+  "brightness 100": [
+    "maximum brightness",
+    "brightness maximum",
+    "brightness max",
+    "max brightness"
+  ],
+
+  "brightness 0": [
+    "minimum brightness",
+    "brightness minimum",
+    "brightness min",
+    "min brightness"
+  ]
+}

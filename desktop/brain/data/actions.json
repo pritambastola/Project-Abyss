@@ -1,0 +1,13 @@
+{
+  "open": ["open", "launch", "start", "run"],
+
+  "close": ["close", "quit", "exit", "terminate"],
+
+  "search": ["search", "google", "find", "look"],
+
+  "play": ["play"],
+
+  "volume": ["volume", "sound"],
+
+  "brightness": ["brightness", "screen"]
+}

@@ -1,0 +1,30 @@
+{
+  "volume up": [
+    "volume up",
+    "increase volume",
+    "raise volume",
+    "turn up volume",
+    "make it louder",
+    "louder"
+  ],
+
+  "volume down": [
+    "volume down",
+    "decrease volume",
+    "lower volume",
+    "turn down volume",
+    "make it quieter",
+    "quieter"
+  ],
+
+  "volume 100": [
+    "maximum volume",
+    "volume maximum",
+    "volume max",
+    "max volume"
+  ],
+
+  "volume 0": ["minimum volume", "volume minimum", "volume min", "min volume"],
+
+  "mute": ["mute", "mute volume", "turn sound off", "silence"]
+}
