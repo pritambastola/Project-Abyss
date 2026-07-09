@@ -1,12 +1,19 @@
 from core.logger import logger
+from core.event_bus import EventBus
+
+
+def spotify_opened(app_name):
+    logger.info(f"{app_name} opened successfully!")
 
 
 def main():
-    logger.info("=====================================")
-    logger.info("Project-Abyss starting...")
-    logger.info("Version: Genesis")
-    logger.info("Logger initialized successfully.")
-    logger.info("=====================================")
+    bus = EventBus()
+
+    bus.subscribe("app_opened", spotify_opened)
+
+    logger.info("Publishing Event...")
+
+    bus.publish("app_opened", "Spotify")
 
 
 if __name__ == "__main__":
